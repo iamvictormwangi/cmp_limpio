@@ -1,6 +1,6 @@
-# cmp-bootstrap.nvim
+# cmp_limpio
 
-cmp-bootstrap.nvim is nvim-cmp completion source for bootstrap 4 class names
+cmp_limpio is nvim-cmp completion source for limpio class names
 
 ## Requirements
 
@@ -13,7 +13,7 @@ using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
-    "rambhosale/cmp-bootstrap.nvim",
+    "mkoloni/cmp_limpio",
     after = "nvim-cmp"
     event = "InsertEnter",
  }
