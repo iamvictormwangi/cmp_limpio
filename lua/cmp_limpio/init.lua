@@ -15,19 +15,6 @@ source.get_keyword_pattern = function()
   return [[\([^"' ~\.\s]\)*]]
 end
 
-local generateDoc = function(className)
-  -- type of class
-  -- margin
-  local prefix = string.sub(className, 1, 3)
-
-  local prefixMatch = prefix:match "^[mp][setb][-]"
-  if prefixMatch then
-    return compDoc(className)
-  end
-
-  return nil
-end
-
 source.complete = function(self, request, callback)
   if not vim.regex(self.get_keyword_pattern() .. "$"):match_str(request.context.cursor_before_line) then
     return callback()
