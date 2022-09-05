@@ -35,14 +35,12 @@ local compDoc = function(className)
   local screenPrefix = string.sub(className, 4, 6)
   -- local isSmallDevice = false
 
-  if screenPrefix == "md-" then
+  if screenPrefix == "mobile-" then
     out = "// Medium devices (tablets, 768px and up) \n@media (min-width: 768px) {\n\t" .. out
-  elseif screenPrefix == "lg-" then
+  elseif screenPrefix == "tablet-" then
     out = "// Large devices (desktops, 992px and up) \n@media (min-width: 992px) { \n\t" .. out
-  elseif screenPrefix == "xl-" then
+  elseif screenPrefix == "laptop-" then
     out = "// X-Large devices (large desktops, 1200px and up) \n@media (min-width: 1200px) { \n\t" .. out
-  elseif screenPrefix == "xxl" then
-    out = "// XX-Large devices (larger desktops, 1400px and up) \n@media (min-width: 1400px) { \n\t" .. out
   else
     out = "// Small devices (landscape phones, 576px and up) \n@media (min-width: 576px) { \n\t" .. out
     -- isSmallDevice = true
